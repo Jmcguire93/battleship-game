@@ -15,4 +15,8 @@ class Board
     row, column = position 
     @grid[row][column] = value 
   end
+
+  def num_ships
+    @grid.flatten.count { |ele| ele == :S }
+  end
 end
