@@ -10,4 +10,9 @@ class Board
     row, column = position 
     @grid[row][column]
   end
+
+  def []=(position, value)
+    row, column = position 
+    @grid[row][column] = value 
+  end
 end
