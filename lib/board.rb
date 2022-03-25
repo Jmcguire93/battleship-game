@@ -19,4 +19,15 @@ class Board
   def num_ships
     @grid.flatten.count { |ele| ele == :S }
   end
+
+  def attack(position)
+    if self[position] == :S 
+      self[position] = :H
+      puts "You sunk my battleship!"
+      return true 
+    else 
+      self[position] = :X
+      return false 
+    end
+  end
 end
